@@ -1,0 +1,122 @@
+.rules {
+  width: max-content;
+  margin-inline: auto;
+  margin-bottom: 5rem;
+}
+.rules__open {
+  color: hsl(0, 50%, 100%);
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1.8px solid hsl(0, 50%, 100%, 0.7);
+  padding: 0.4rem 2.8rem;
+  border-radius: 0.8rem;
+  transition: background 500ms, color 500ms;
+}
+
+.rules__open:hover {
+  color: hsl(214, 47%, 23%);
+  background: hsl(0, 50%, 100%);
+  transition: background 300ms, color 300ms;
+}
+
+.model__container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background: hsla(0, 0%, 0%, 0);
+  transform: translateY(-130%);
+  transition: transform 500ms;
+  will-change: transform;
+}
+
+.show {
+  background: hsla(0, 0%, 0%, 0.3);
+  transform: translateY(0%);
+  transition: transform 500ms, background 300ms 400ms;
+}
+
+.model {
+  background-color: hsl(0, 50%, 100%);
+  width: 100%;
+  display: grid;
+  grid-template-areas: "title" "rules" "close";
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.model__title {
+  color: hsl(229, 25%, 31%);
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  grid-area: title;
+}
+
+.model__rules {
+  padding: 0 2rem;
+  width: 100%;
+  max-width: 30rem;
+  grid-area: rules;
+}
+
+.model__close {
+  width: 1.6rem;
+  text-align: center;
+  margin: 5rem auto;
+  cursor: pointer;
+  transition: transform 500ms;
+  grid-area: close;
+}
+
+.model__close:hover {
+  transform: scale(1.1) rotate(-90deg);
+  transition: transform 300ms;
+}
+
+/* 480px */
+@media screen and (min-width: 30em) {
+  .model__container {
+    align-items: center;
+  }
+
+  .model {
+    width: max-content;
+    min-height: max-content;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    grid-template-areas: "title close" "rules rules";
+  }
+
+  .model__title {
+    text-align: left;
+    margin: 0;
+  }
+  .model__rules {
+    width: 100%;
+    max-width: 30rem;
+    margin-top: 3rem;
+  }
+
+  .model__close {
+    margin: 0;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .rules {
+    margin-bottom: 2rem;
+    margin-inline: 0;
+    margin-left: auto;
+  }
+}

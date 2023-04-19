@@ -1,0 +1,18 @@
+.playboard {
+  padding: 15rem 0 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 450px;
+}
+
+.playboard__tringle {
+  width: var(--tringle-size);
+  height: var(--tringle-size);
+  background: url("../../assets/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  position: relative;
+  isolation: isolate;
+}

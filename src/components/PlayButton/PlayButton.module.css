@@ -1,0 +1,67 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--btn-size);
+  height: var(--btn-size);
+  border-radius: 50%;
+  filter: drop-shadow(0 3px 1px hsl(0, 0%, 0%, 0.2));
+  position: absolute;
+  z-index: 9;
+  transition: transform 500ms;
+  will-change: transform;
+}
+
+.btn--paper {
+  background: linear-gradient(160deg, hsl(230, 89%, 65%), hsl(230, 89%, 62%));
+  box-shadow: 0px 4px 0px 0px hsl(230, 61%, 46%);
+  top: 0;
+  left: 0;
+  transform: translate(-30%, -40%);
+}
+
+.btn--paper:hover {
+  transition: transform 300ms;
+  transform: translate(-30%, -40%) scale(1.05);
+}
+
+.btn--scissors {
+  background: linear-gradient(160deg, hsl(40, 84%, 53%), hsl(39, 89%, 49%));
+  box-shadow: 0px 4px 0px 0px hsl(28, 69%, 43%);
+  top: 0;
+  right: 0;
+  transform: translate(30%, -40%);
+}
+
+.btn--scissors:hover {
+  transition: transform 300ms;
+  transform: translate(30%, -40%) scale(1.05);
+}
+
+.btn--rock {
+  background: linear-gradient(160deg, hsl(349, 70%, 56%), hsl(349, 71%, 52%));
+  box-shadow: 0px 4px 0px 0px hsl(346, 71%, 35%);
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+}
+
+.btn--rock:hover {
+  transition: transform 300ms;
+  transform: translate(-50%) scale(1.05);
+}
+
+.btn__iconContainer {
+  background: hsl(0, 0%, 100%);
+  box-shadow: inset 0px 4px 0px 0px hsl(229, 26%, 87%);
+  width: var(--icon-container-size);
+  height: var(--icon-container-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.btn__icon {
+  width: var(--icon-size);
+}
