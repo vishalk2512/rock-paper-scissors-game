@@ -1,6 +1,12 @@
 import styles from "./PlayButton.module.css";
 import { paper, scissors, rock } from "../../assets";
 
+const imageMap = {
+  paper: paper,
+  scissors: scissors,
+  rock: rock,
+};
+
 const PlayButton = ({ type, userPick }) => {
   return (
     <button
@@ -9,7 +15,11 @@ const PlayButton = ({ type, userPick }) => {
       id={`${type}`}
     >
       <div className={styles.btn__iconContainer}>
-        <img className={styles.btn__icon} src={eval(type)} alt={`${type}`} />
+        <img
+          className={styles.btn__icon}
+          src={imageMap[type]}
+          alt={`${type}`}
+        />
       </div>
     </button>
   );
